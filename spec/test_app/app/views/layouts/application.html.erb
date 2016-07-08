@@ -1,58 +1,58 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>SigbitAdminRails</title>
-  <%= csrf_meta_tags %>
+  <head>
+    <title>SigbitAdminRails</title>
+    <%= csrf_meta_tags %>
 
-  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-</head>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
 
-<body>
-<div id="wrapper">
+  <body>
+    <div id="wrapper">
 
-  <!-- Sidebar -->
-  <%= sidebar brand_url: root_path do %>
-    <%= sidebar_item 'Dashboard', '#muppen' %>
-    <%= sidebar_item 'Level1', '#muppen' do %>
-        <%= sidebar_item 'Level2', '#jo' do %>
+      <!-- Sidebar -->
+      <%= sidebar brand_url: root_path do %>
+        <%= sidebar_item 'Dashboard', '#muppen' %>
+        <%= sidebar_item 'Level1', '#muppen' do %>
+          <%= sidebar_item 'Level2', '#jo' do %>
             <%= sidebar_item 'Level 3', '#' %>
           <% end %>
+        <% end %>
       <% end %>
-  <% end %>
 
-  <!-- /#sidebar-wrapper -->
+      <!-- /#sidebar-wrapper -->
 
-  <!-- Header-navbar -->
+      <!-- Header-navbar -->
 
-  <div id="page-content-wrapper">
+      <div id="page-content-wrapper">
 
-    <nav class="navbar navbar-full" id="header-navbar">
+        <nav class="navbar navbar-full" id="header-navbar">
 
-      <button id="sidebar-toggle" class="pull-xs-left navbar-toggler" type="button">
-        <i class="fa fa-bars"></i>
-      </button>
-      <a class="navbar-brand" href="#">Significant Bit</a>
-      <button class="navbar-toggler hidden-md-up pull-xs-right" type="button" data-toggle="collapse" data-target="#CollapsingNavbar">
-        <i class="fa fa-ellipsis-v"></i>
-      </button>
+          <button id="sidebar-toggle" class="pull-xs-left navbar-toggler" type="button">
+            <i class="fa fa-bars"></i>
+          </button>
+          <a class="navbar-brand" href="#">Significant Bit</a>
+          <button class="navbar-toggler hidden-md-up pull-xs-right" type="button" data-toggle="collapse" data-target="#CollapsingNavbar">
+            <i class="fa fa-ellipsis-v"></i>
+          </button>
 
-      <div class="collapse navbar-toggleable-sm" id="CollapsingNavbar">
-        <ul class="nav navbar-nav pull-xs-right">
-          <li class="nav-item">
-            <a class="nav-link" href="#">info@significantbit.se</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Logga ut</a>
-          </li>
-        </ul>
+          <div class="collapse navbar-toggleable-sm" id="CollapsingNavbar">
+            <ul class="nav navbar-nav pull-xs-right">
+              <li class="nav-item">
+                <a class="nav-link" href="#">info@significantbit.se</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Logga ut</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <!-- /#header-navbar -->
+        <div class="container-fluid">
+          <%= yield %>
+        </div>
       </div>
-    </nav>
-
-    <!-- /#header-navbar -->
-    <div class="container-fluid">
-    <%= yield %>
-      </div>
-  </div>
-</body>
+  </body>
 </html>

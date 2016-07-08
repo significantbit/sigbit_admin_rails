@@ -15143,6 +15143,11 @@ $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
 
+// Enable Popovers
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
+
 // Bootstrap button dropdown inside responsive table not visible because of scroll
 // http://stackoverflow.com/questions/26018756/bootstrap-button-drop-down-inside-responsive-table-not-visible-because-of-scroll
 $('body') .on('show.bs.dropdown', '.table-responsive', function () { $(this).css("overflow", "visible"); })
