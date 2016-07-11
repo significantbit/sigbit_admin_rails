@@ -4898,6 +4898,20 @@ table .small-action-btn-group {
   top: 0.75rem;
   right: 0.75rem; }
 
+.action-toolbar {
+  position: relative;
+  padding: 1.5rem 0; }
+  .action-toolbar::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .action-toolbar > * {
+    margin-left: 0.75rem;
+    margin-top: 0;
+    margin-bottom: 0; }
+    .action-toolbar > *:first-child {
+      margin-left: 0; }
+
 .js .inputfile {
   width: 0.1px;
   height: 0.1px;
@@ -4986,7 +5000,7 @@ table .small-action-btn-group {
 .nestable-handle {
   display: block;
   margin: 0.75rem 0;
-  padding: 0.75rem;
+  padding: 0.75rem 0.75rem 0.75rem 2.4999rem;
   background-color: #eceeef;
   border: 1px solid transparent;
   cursor: move;
@@ -4999,7 +5013,7 @@ table .small-action-btn-group {
   cursor: pointer;
   float: left;
   width: 32px;
-  margin: 0 0.3rem 0;
+  margin: 0 0.15rem 0 2.25rem;
   padding: 0.75rem 0 0.75rem 0.75rem;
   text-indent: -9999px;
   white-space: nowrap;
@@ -5015,7 +5029,7 @@ table .small-action-btn-group {
   font-family: 'FontAwesome';
   font-size: 0.9em;
   content: '\f067';
-  color: #818a91;
+  color: rgba(55, 58, 60, 0.5);
   text-indent: 0; }
 
 .nestable-item > button[data-action="collapse"]:before {
@@ -5048,6 +5062,11 @@ table .small-action-btn-group {
 
 .nestable-dragel .nestable-handle {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175); }
+
+.nestable-item .fa.drag-handle {
+  position: absolute;
+  top: 1.12503rem;
+  left: 1.12503rem; }
 
 .nestable-primary .nestable-handle {
   background-color: #6D5CAE;
@@ -5098,3 +5117,41 @@ table .small-action-btn-group {
   .nestable-inverse .small-action-btn-group .btn,
   .nestable-inverse button:before {
     color: white; }
+
+.sortable-placeholder {
+  background: #f7f7f9;
+  border: 2px dashed #818a91; }
+
+[class*="sortable"] > * {
+  cursor: move; }
+
+/*
+Drag-handles
+Using Font Awesome classes. The .drag-handle content is the icon fa-ellipsis-v used twice.
+*/
+.fa.drag-handle {
+  margin-top: -0.75rem;
+  margin-right: 0;
+  margin-bottom: -0.75rem;
+  margin-left: -1rem;
+  padding: 0.75rem 0.75rem 0.75rem 1rem;
+  cursor: move;
+  color: rgba(55, 58, 60, 0.5); }
+
+.fa.drag-handle:before {
+  letter-spacing: 2px;
+  content: "\f142\f142"; }
+
+button .fa.drag-handle {
+  margin: 0;
+  padding: 0; }
+
+/*
+This code snippet searches for divs containing classes with the word "sortable". This means
+every .card div inside a sortable container will inherit the properties and values.
+
+Divs with .card will disappear when included with sortable (jQuery plugin) because of its
+relative positioning. This will fix this. But it may screw up other things.
+*/
+div[class*="sortable"] .card {
+  position: static; }
