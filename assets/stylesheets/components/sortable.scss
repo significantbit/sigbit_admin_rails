@@ -1,0 +1,47 @@
+
+.sortable-placeholder {
+  background: $gray-lightest;
+  border: 2px dashed $gray-light;
+}
+
+[class*="sortable"] > * {
+  cursor: move;
+}
+
+/*
+Drag-handles
+Using Font Awesome classes. The .drag-handle content is the icon fa-ellipsis-v used twice.
+*/
+
+.fa.drag-handle {
+  margin-top: -$spacer/2;
+  margin-right: 0;
+  margin-bottom: -$spacer/2;
+  margin-left: -$spacer/1.5;
+  padding: $spacer/2 $spacer/2 $spacer/2 $spacer/1.5;
+  cursor: move;
+  color: rgba($gray-dark,0.5);
+}
+
+.fa.drag-handle:before {
+  letter-spacing: 2px;
+  content: "\f142\f142";
+}
+
+button .fa.drag-handle {
+  margin: 0;
+  padding: 0;
+}
+
+
+/*
+This code snippet searches for divs containing classes with the word "sortable". This means
+every .card div inside a sortable container will inherit the properties and values.
+
+Divs with .card will disappear when included with sortable (jQuery plugin) because of its
+relative positioning. This will fix this. But it may screw up other things.
+*/
+
+div[class*="sortable"] .card {
+  position: static;
+}

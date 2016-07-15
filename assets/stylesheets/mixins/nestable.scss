@@ -1,0 +1,11 @@
+// nestable variants
+
+@mixin nestable-variant($background, $border) {
+  background-color: $background;
+  border-color: $border;
+}
+
+@mixin nestable-outline-variant($color) {
+  background-color: transparent;
+  border-color: $color;
+}

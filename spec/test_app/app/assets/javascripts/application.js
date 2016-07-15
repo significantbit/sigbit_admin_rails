@@ -11,7 +11,7 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery_ujs
-//= require turbolinks
+//= require tether
+//= require bootstrap
 //= require sigbit-admin
 //= require_tree .

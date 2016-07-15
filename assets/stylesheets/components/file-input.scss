@@ -1,0 +1,87 @@
+.js .inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+
+.inputfile + label {
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    margin: 0 0 -5px 0;
+    @include border-radius($border-radius);
+}
+
+
+.no-js .inputfile + label {
+    display: none;
+}
+
+.inputfile:focus + label,
+.inputfile.has-focus + label {
+    outline: 1px dotted #000;
+    outline: -webkit-focus-ring-color auto 5px;
+}
+
+.inputfile + label * {
+    /* pointer-events: none; */
+    /* in case of FastClick lib use */
+}
+
+
+/* BIG style */
+
+.inputfile.big + label {
+  width: 100%;
+  padding: $spacer*2 $spacer;
+  color: $brand-primary;
+  background-color: $gray-lighter;
+  text-align: center;
+
+  i {
+    margin-bottom: $spacer/2;
+  }
+}
+
+
+
+.inputfile.big:focus + label,
+.inputfile.big.has-focus + label,
+.inputfile.big + label:hover {
+    background-color: lighten($gray-lighter, 2%);
+}
+
+
+/* Medium style */
+
+.inputfile.medium + label {
+  width: 100%;
+  padding: $spacer/2;
+  color: $brand-primary;
+  background-color: $gray-lighter;
+}
+
+.inputfile.medium:focus + label,
+.inputfile.medium.has-focus + label,
+.inputfile.medium + label:hover {
+    border-color: #722040;
+}
+
+
+.inputfile.medium + label span {
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: middle;
+    padding: $spacer/4 0;
+    color: $gray;
+}
+.inputfile.medium + label .btn {
+    float: right;
+}

@@ -1,0 +1,31 @@
+PATH
+  remote: .
+  specs:
+    sigbit_admin_rails (0.0.3)
+      bootstrap (~> 4.0.0.alpha3)
+      bourbon (~> 4.2.7)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    autoprefixer-rails (6.3.7)
+      execjs
+    bootstrap (4.0.0.alpha3)
+      autoprefixer-rails (>= 6.0.3)
+      sass (>= 3.4.19)
+    bourbon (4.2.7)
+      sass (~> 3.4)
+      thor (~> 0.19)
+    execjs (2.7.0)
+    sass (3.4.22)
+    thor (0.19.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bourbon (~> 4.2.7)
+  sigbit_admin_rails!
+
+BUNDLED WITH
+   1.12.5
