@@ -1,0 +1,45 @@
+// Override bootstrap CSS
+.card {
+  margin-bottom: $spacer;
+
+  .card-actions {
+    position: absolute;
+    top: $spacer/1.25;
+    right: $spacer/1.25;
+    font-size: 0.9em;
+  }
+
+  .card-header .card-actions {
+    position: absolute;
+    top: 50%;
+    @include transform(translateY(-50%));
+  }
+
+  .card-header {
+      position: relative;
+      padding-top: $spacer/1.1;
+      padding-bottom: $spacer/1.1;
+      background: transparent;
+
+      h1, h2, h3, h4, h5, h6 {
+        margin-bottom: 0 !important;
+      }
+  }
+  h1, h2, h3, h4, h5, h6 {
+    &.card-header {
+      margin-bottom: 0 !important;
+    }
+  }
+}
+
+.card-gray-dark         { background-color: $gray-dark; }
+.card-gray              { background-color: $gray; }
+.card-gray-light        { background-color: $gray-light; }
+.card-gray-lighter      { background-color: $gray-lighter; }
+.card-gray-lightest     { background-color: $gray-lightest; }
+.card-sidebar-bg        { background-color: $sidebar-bg; }
+.card-header-navbar-bg  { background-color: $header-navbar-bg; }
+
+.card-gray-dark, .card-gray, .card-gray-light, .card-gray-lighter, .card-gray-lightest, .card-sidebar-bg, .card-header-navbar-bg {
+  border: none;
+ }

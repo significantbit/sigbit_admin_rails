@@ -13,5 +13,8 @@ Gem::Specification.new do |s|
     'http://rubygems.org/gems/sigbit_admin_rails'
   s.license       = 'ISC'
   s.require_paths = %w(lib)
+
+  s.add_dependency('bourbon', '~> 4.2.7')
+  s.add_dependency('bootstrap', '~> 4.0.0.alpha3')
 end
 

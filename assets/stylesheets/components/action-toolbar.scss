@@ -1,0 +1,14 @@
+.action-toolbar {
+  position: relative;
+  padding: $navbar-padding-horizontal 0;
+  @include clearfix;
+
+  > * {
+    margin-left: $spacer/2;
+    margin-top: 0;
+    margin-bottom: 0;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}

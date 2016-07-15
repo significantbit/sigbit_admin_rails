@@ -1,0 +1,30 @@
+
+.page-header {
+  // background: rgba(red,0.1);
+  padding-bottom: $spacer;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+
+  // Override bootstrap breadcrumb CSS
+  .breadcrumb {
+    padding: 0;
+    margin: $spacer/4 0;
+    background: transparent;
+
+    a:hover {
+      text-decoration: none;
+    }
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  .page-header-actions {
+    position: absolute;
+    right: $spacer/1.5;
+    top: 50%;
+    @include transform(translateY(-50%));
+  }
+}

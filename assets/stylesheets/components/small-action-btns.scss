@@ -1,0 +1,41 @@
+.small-action-btn-group {
+  display: inline-block;
+  padding: 0 !important;
+  text-align: right !important;
+
+  .btn {
+    position: relative;
+    margin: 0;
+    font-size: 0.8em;
+    padding: $spacer/4;
+    opacity: 0.8;
+    line-height: 1rem;
+    border: none;
+    box-shadow: none;
+    &.btn-link {
+      color: $gray-dark;
+      padding: $spacer/4 $spacer/6;
+    }
+  }
+
+  .dropdown-menu {
+    font-size: 0.9em;
+  }
+  .dropdown-toggle {
+    i { font-size: 1.1em; }
+    &:after { display: none; }
+  }
+
+}
+
+
+table .small-action-btn-group {
+  display: table-cell;
+  vertical-align: middle !important;
+}
+
+.nestable .small-action-btn-group {
+  position: absolute;
+  top: $spacer/2;
+  right: $spacer/2;
+}

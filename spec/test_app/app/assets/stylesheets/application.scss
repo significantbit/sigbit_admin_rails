@@ -12,6 +12,8 @@
  *
  *= require_tree .
  *= require font-awesome
- *= require sigbit-admin.min
  *= require_self
  */
+
+@import 'variables_test';
+@import 'sigbit-admin';

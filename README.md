@@ -3,16 +3,25 @@
 ### Current Version 0.0.1
 
 ## Installation Guide
-    gem install sigbit_admin_rails
+Add this to your Gemfile
 
-Add this to your application.css file
+    gem 'jquery-rails'
+    gem 'sigbit_admin_rails'
 
-    *= require sigbit-admin
-    
+Add this to your application.scss file
+
+    @import 'variables_test'; //CUSTOM VARIABLES FILE
+    @import 'sigbit-admin';n
     
 Add this to your application.js file
 
+    //= require jquery
+    //= require tether
+    //= require bootstrap
     //= require sigbit-admin
     
+### Override variables
+Create a the file `app/assets/stylesheets/variables.scss` to override variables
+
 ### Helpers
 This gem have some helpers to help you create some components easy, check the [Wiki](https://github.com/significantbit/sigbit_admin_rails/wiki) for more information
