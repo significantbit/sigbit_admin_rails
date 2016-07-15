@@ -2,7 +2,7 @@ $LOAD_PATH.push File.expand_path('../lib', __FILE__)
 
 Gem::Specification.new do |s|
   s.name        = 'sigbit_admin_rails'
-  s.version     = '0.0.3'
+  s.version     = '0.0.4'
   s.date        = '2016-07-06'
   s.summary     = "Significant Bit Admin template for Rails applications"
   s.description = "Gem for including sigbit-admin and helpers for Rails applications"
