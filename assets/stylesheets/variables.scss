@@ -673,16 +673,45 @@ $pre-scrollable-max-height:   340px !default;
 // Logotypes
 // On mobile the sidebar logotype is replaced with the header navbar logotype
 
-$sidebar-logotype: 'http://d1i5cf397ceebi.cloudfront.net/assets/main_logo-4ab62363897ec9168acbb5507e91e7db4910b8006237f4b1be1fb06339a0395a.png'!default;
-$header-navbar-logotype: 'http://www.significantbit.se/assets/logotype-2b1fd527c1bed395289dcef8bdf490100f0c3303786007178694802beb83fbc8.svg'!default;
+$sidebar-logotype:                  "http://www.significantbit.se/assets/logotype-2b1fd527c1bed395289dcef8bdf490100f0c3303786007178694802beb83fbc8.svg" !default;
+$sidebar-logotype-position:         $spacer center !default;
+$sidebar-logotype-size:             auto 50% !default;
+
+$header-navbar-logotype:            $sidebar-logotype !default;
+$header-navbar-logotype-width:      25% !default;
+$header-navbar-logotype-height:     65% !default;
+
 
 // Sidebar
 
-$sidebar-width:   250px!default;
-$sidebar-bg:      #2d2f40!default;
+$sidebar-bg:                        #2d2f40 !default;
+$sidebar-brand-bg:                  darken($sidebar-bg,5%) !default;
+$sidebar-brand-border-color:        darken($sidebar-brand-bg,25%) !default;
+
+$sidebar-width:                     250px !default;
+
+$sidebar-nav-margin:                $spacer 0 0 0 !default;
+$sidebar-nav-li-margin:             0 !default;
+$sidebar-nav-li-lineheight:         50px !default;
+$sidebar-nav-li-textindent:         $spacer !default;
+
+$sidebar-nav-link-color:            rgba(white,0.6) !default;
+$sidebar-nav-link-color-hover:      white !default;
+$sidebar-nav-link-bg-hover:         lighten($sidebar-bg,5%) !default;
+$sidebar-nav-link-color-active:     white !default;
+
+$sidebar-nav-submenu-bg:            darken($sidebar-bg,6%) !default;
+$sidebar-nav-submenu-link-bg-hover: darken($sidebar-bg,3%) !default;
+
 
 // Header-navbar
 
-$header-navbar-height:          60px!default;
-$header-navbar-bg:              white!default;
-$header-navbar-bottom-border:   darken($gray-lighter,10%)!default;
+$header-navbar-height:          60px !default;
+$header-navbar-padding:         $spacer/2 $spacer $spacer/2 0 !default;
+$header-navbar-bg:              white !default;
+$header-navbar-border-color:    darken($gray-lighter,10%) !default; // border-color ist för bottom-border
+
+
+// Action toolbar
+
+$action-toolbar-padding: $spacer 0 !default;
