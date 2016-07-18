@@ -1,8 +1,8 @@
 #header-navbar {
   height: $header-navbar-height;
-  padding: $spacer/2 $spacer $spacer/2 0;
+  padding: $header-navbar-padding;
   background: $header-navbar-bg;
-  border-bottom: 1px solid $header-navbar-bottom-border;
+  border-bottom: 1px solid $header-navbar-border-color;
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
@@ -25,8 +25,8 @@
     top: 50%;
     left: 50%;
     @include transform(translate(-50%, -50%));
-    width: 25%;
-    height: 65%;
+    width: $header-navbar-logotype-width;
+    height: $header-navbar-logotype-height;
     background: transparent url($header-navbar-logotype) no-repeat center center;
     background-size: contain;
 

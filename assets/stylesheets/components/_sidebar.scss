@@ -48,29 +48,26 @@ body {
 
 .sidebar-nav {
     width: $sidebar-width;
-    margin: $spacer 0 0 0;
+    margin: $sidebar-nav-margin;
     padding: 0;
     list-style: none;
 }
 
 .sidebar-nav li {
-    text-indent: $spacer;
-    line-height: 50px;
-
-    .active {
-      color: white !important;
-    }
+    text-indent: $sidebar-nav-li-textindent;
+    line-height: $sidebar-nav-li-lineheight;
+    margin: $sidebar-nav-li-margin;
 
     a {
         position: relative;
         display: block;
         text-decoration: none;
-        color: rgba(white,0.6);
+        color: $sidebar-nav-link-color;
 
         &:hover {
             text-decoration: none;
-            color: #fff;
-            background: lighten($sidebar-bg,5%);
+            color: $sidebar-nav-link-color-hover;
+            background: $sidebar-nav-link-bg-hover;
         }
         &:active, &:focus { text-decoration: none; }
 
@@ -95,28 +92,31 @@ body {
         }
 
         &[aria-expanded="true"] {
-          background: lighten($sidebar-bg, 5%);
+          background: $sidebar-nav-link-bg-hover;
           .fa-chevron-right {
             @include transform(translateY(-50%) rotate(90deg));
           }
         }
     }
+    a.active {
+      color: $sidebar-nav-link-color-active;
+    }
 
     ul.submenu {
-      background: darken($sidebar-bg,6%);
+      background: $sidebar-nav-submenu-bg;
       padding: 0;
 
       li {
-        text-indent: $spacer*1.5;
+        text-indent: $sidebar-nav-li-textindent*1.5;
         > ul.submenu li {
-          text-indent: $spacer*2;
+          text-indent: $sidebar-nav-li-textindent*2;
         }
           a[aria-expanded="true"] {
-            background: darken($sidebar-bg,3%);
+            background: $sidebar-nav-submenu-link-bg-hover;
           }
       }
       a:hover {
-        background: darken($sidebar-bg,3%);
+        background: $sidebar-nav-submenu-link-bg-hover;
       }
     }
 
@@ -127,9 +127,9 @@ body {
   display: block;
   width: 100%;
   height: $header-navbar-height;
-  background: darken($sidebar-bg,5%) url($sidebar-logotype) no-repeat $spacer center;
-  background-size: auto 50%;
-  border-bottom: 1px solid darken($sidebar-bg,25%);
+  background: $sidebar-brand-bg url($sidebar-logotype) no-repeat $sidebar-logotype-position;
+  background-size: $sidebar-logotype-size;
+  border-bottom: 1px solid $sidebar-brand-border-color;
 }
 
 

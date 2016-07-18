@@ -1,6 +1,6 @@
 .action-toolbar {
   position: relative;
-  padding: $navbar-padding-horizontal 0;
+  padding: $action-toolbar-padding;
   @include clearfix;
 
   > * {
