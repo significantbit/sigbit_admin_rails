@@ -1,9 +1,5 @@
 'use strict';
-
-//= require jquery.sortable.min
-//= require jquery.nestable
-
-; (function ($, window, document, undefined) {
+$(function() {
   $('.inputfile').each(function () {
     var $input = $(this),
     $label = $input.next('label'),
@@ -31,11 +27,6 @@
 
 
 
-
-})(jQuery, window, document);
-
-
-$(function() {
   // Sidebar toggle
   $("#sidebar-toggle").click(function (e) {
     e.preventDefault();
