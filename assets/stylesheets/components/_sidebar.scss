@@ -63,6 +63,7 @@ body {
         display: block;
         text-decoration: none;
         color: $sidebar-nav-link-color;
+        @include transition(all .2s ease);
 
         &:hover {
             text-decoration: none;
@@ -79,13 +80,11 @@ body {
         }
 
         .fa-chevron-right {
-          position: absolute;
-          right: $spacer;
-          top: 50%;
+          @include position(absolute, 50% $spacer null null);
           @include transform(translateY(-50%) rotate(0deg));
+          display: inline-block;
           width: 10px;
           height: 10px;
-          display: inline-block;
           margin: 0;
           font-size: 0.8em;
           @include transition(all .2s ease);
@@ -100,6 +99,7 @@ body {
     }
     a.active {
       color: $sidebar-nav-link-color-active;
+      background: $sidebar-nav-link-bg-active;
     }
 
     ul.submenu {

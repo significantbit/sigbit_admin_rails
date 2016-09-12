@@ -1,6 +1,5 @@
 .js .inputfile {
-    width: 0.1px;
-    height: 0.1px;
+    @include size(0.1px);
     opacity: 0;
     overflow: hidden;
     position: absolute;
@@ -11,10 +10,12 @@
 .inputfile + label {
     white-space: nowrap;
     cursor: pointer;
-    display: inline-block;
-    overflow: hidden;
-    margin: 0 0 -5px 0;
-    @include border-radius($border-radius);
+    display: block;
+    margin: 0;
+}
+
+.inputfile + label * {
+  pointer-events: none !important;
 }
 
 

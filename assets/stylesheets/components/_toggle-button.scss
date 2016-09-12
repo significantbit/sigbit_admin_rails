@@ -1,0 +1,122 @@
+
+$toggle-height:      2rem;
+$toggle-height-sm:   1.5rem;
+$toggle-height-lg:   2.5rem;
+
+.toggle { /* wrapper label */
+  position: relative;
+  display: block;
+  width: $toggle-height*2;
+  height: $toggle-height;
+  margin: 0;
+
+  input { display:none; }
+
+  .toggle-slider { /* The slider */
+    @include position(absolute, 0 0 0 0);
+    cursor: pointer;
+    background-color: $gray-lighter;
+    @include border-radius($toggle-height);
+    @include box-shadow(inset 0 1px 3px rgba(0,0,0,.12));
+
+    &:before {
+      @include position(absolute, null null 0.25rem 0.25rem);
+      content: "";
+      height: $toggle-height - 0.5rem;
+      width: $toggle-height - 0.5rem;
+      @include border-radius(50%);
+      background-color: white;
+    }
+  }
+
+
+  .toggle-text {
+    position: absolute;
+    display: inline-block;
+    line-height: $toggle-height;
+    font-size: 0.8em;
+    font-weight: $btn-font-weight;
+
+    &.on {
+      left: 11px;
+      color: white;
+      visibility: hidden;
+      opacity: 0;
+    }
+    &.off {
+      right: 11px;
+      color: $gray-light;
+      opacity: 1;
+    }
+  }
+
+
+  input:checked + .toggle-slider { /* Checked state */
+
+    &:before { @include transform(translateX($toggle-height)); }
+    .toggle-text.on  { visibility: visible; opacity: 1; }
+    .toggle-text.off { visibility: hidden; opacity: 0; }
+  }
+
+  input:focus + .toggle-slider { /* Focused state */
+    box-shadow: 0 0 1px $brand-success;
+  }
+
+
+  .toggle-slider,
+  .toggle-slider:before,
+  .toggle-text {
+    @include transition(all .2s ease-in-out);
+  }
+
+}
+
+.toggle-sm {
+  width: $toggle-height-sm*2;
+  height: $toggle-height-sm;
+
+  .toggle-slider { /* The slider */
+    @include border-radius($toggle-height-sm);
+
+    &:before {
+      height: $toggle-height-sm - 0.5rem;
+      width: $toggle-height-sm - 0.5rem;
+    }
+  }
+  .toggle-text { line-height: $toggle-height-sm; }
+  input:checked + .toggle-slider:before { @include transform(translateX($toggle-height-sm)); }
+
+}
+
+.toggle-lg {
+  width: $toggle-height-lg*2;
+  height: $toggle-height-lg;
+
+  .toggle-slider { /* The slider */
+    @include border-radius($toggle-height-lg);
+
+    &:before {
+      height: $toggle-height-lg - 0.5rem;
+      width: $toggle-height-lg - 0.5rem;
+    }
+  }
+  .toggle-text { line-height: $toggle-height-lg; }
+  input:checked + .toggle-slider:before { @include transform(translateX($toggle-height-lg)); }
+
+}
+
+.toggle-primary input:checked + .toggle-slider { /* Checked state */
+    background-color: $brand-primary;
+}
+.toggle-success input:checked + .toggle-slider { /* Checked state */
+    background-color: $brand-success;
+}
+.toggle-info input:checked + .toggle-slider { /* Checked state */
+    background-color: $brand-info;
+}
+.toggle-warning input:checked + .toggle-slider { /* Checked state */
+    background-color: $brand-warning;
+}
+.toggle-danger input:checked + .toggle-slider { /* Checked state */
+    background-color: $brand-danger;
+}

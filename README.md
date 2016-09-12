@@ -1,9 +1,13 @@
 # Sigbit Admin - Rails
 
-### Current Version 0.0.1
+[![Gem Version](https://badge.fury.io/rb/sigbit_admin_rails.svg)](https://badge.fury.io/rb/sigbit_admin_rails)
 
 ## Installation Guide
 Add this to your Gemfile
+
+    source 'https://rails-assets.org' do
+      gem 'rails-assets-tether', '>= 1.1.0'
+    end
 
     gem 'jquery-rails'
     gem 'sigbit_admin_rails'
@@ -11,15 +15,15 @@ Add this to your Gemfile
 Add this to your application.scss file
 
     @import 'variables_test'; //CUSTOM VARIABLES FILE
-    @import 'sigbit-admin';n
-    
+    @import 'sigbit-admin';
+
 Add this to your application.js file
 
     //= require jquery
     //= require tether
     //= require bootstrap
     //= require sigbit-admin
-    
+
 ### Override variables
 Create a the file `app/assets/stylesheets/variables.scss` to override variables
 
