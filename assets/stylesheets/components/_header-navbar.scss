@@ -3,17 +3,13 @@
   padding: $header-navbar-padding;
   background: $header-navbar-bg;
   border-bottom: 1px solid $header-navbar-border-color;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  transform-style: preserve-3d;
   font-size: 0.9em;
+  color: $header-navbar-color;
+  @include transform-style(preserve-3d);
 
   // sidebar toggle
   #sidebar-toggle {
-    position: absolute;
-    top: 0;
-    bottom: -1px;
-    left: 0;
+    @include position(absolute, 0 null -1px 0);
     padding: 0 $spacer;
     border-radius: 0;
     outline: 0 !important;
@@ -21,9 +17,7 @@
 
   .navbar-brand {
     display: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    @include position(absolute, 50% null null 50%);
     @include transform(translate(-50%, -50%));
     width: $header-navbar-logotype-width;
     height: $header-navbar-logotype-height;
@@ -36,9 +30,7 @@
   }
 
 .btn-group {
-  position: absolute;
-  top: 0;
-  right: $spacer;
+  @include position(absolute, 0 $spacer null null);
   height: 100%;
 
   .btn {

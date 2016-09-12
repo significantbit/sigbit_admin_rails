@@ -699,6 +699,7 @@ $sidebar-nav-link-color:            rgba(white,0.6) !default;
 $sidebar-nav-link-color-hover:      white !default;
 $sidebar-nav-link-bg-hover:         lighten($sidebar-bg,5%) !default;
 $sidebar-nav-link-color-active:     white !default;
+$sidebar-nav-link-bg-active:        transparent !default;
 
 $sidebar-nav-submenu-bg:            darken($sidebar-bg,6%) !default;
 $sidebar-nav-submenu-link-bg-hover: darken($sidebar-bg,3%) !default;
@@ -709,7 +710,8 @@ $sidebar-nav-submenu-link-bg-hover: darken($sidebar-bg,3%) !default;
 $header-navbar-height:          60px !default;
 $header-navbar-padding:         $spacer/2 $spacer $spacer/2 0 !default;
 $header-navbar-bg:              white !default;
-$header-navbar-border-color:    darken($gray-lighter,10%) !default; // border-color ist för bottom-border
+$header-navbar-color:           $gray-dark !default;
+$header-navbar-border-color:    darken($gray-lighter,10%) !default;
 
 
 // Action toolbar

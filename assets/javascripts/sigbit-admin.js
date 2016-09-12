@@ -1,9 +1,10 @@
 'use strict';
-$(function() {
+
+$(document).ready(function() {
   $('.inputfile').each(function () {
     var $input = $(this),
-    $label = $input.next('label'),
-    labelVal = $label.html();
+      $label = $input.next('label'),
+      labelVal = $label.html();
 
     $input.on('change', function (e) {
       var fileName = '';
@@ -34,14 +35,10 @@ $(function() {
   });
 
   // Enable Tooltips
-  $(function () {
-    $('[data-toggle="tooltip"]').tooltip()
-  })
+  $('[data-toggle="tooltip"]').tooltip()
 
   // Enable Popovers
-  $(function () {
-    $('[data-toggle="popover"]').popover()
-  })
+  $('[data-toggle="popover"]').popover()
 
   // Bootstrap button dropdown inside responsive table not visible because of scroll
   // http://stackoverflow.com/questions/26018756/bootstrap-button-drop-down-inside-responsive-table-not-visible-because-of-scroll
@@ -49,4 +46,3 @@ $(function() {
     .on('hide.bs.dropdown', '.table-responsive', function () { $(this).css("overflow", "auto"); });
 
 });
-

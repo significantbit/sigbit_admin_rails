@@ -3,15 +3,12 @@
   margin-bottom: $spacer;
 
   .card-actions {
-    position: absolute;
-    top: $spacer/1.25;
-    right: $spacer/1.25;
+    @include position(absolute, $spacer/1.25 $spacer/1.25 null null);
     font-size: 0.9em;
   }
 
   .card-header .card-actions {
-    position: absolute;
-    top: 50%;
+    @include position(absolute, 50% null null null);
     @include transform(translateY(-50%));
   }
 

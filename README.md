@@ -5,6 +5,10 @@
 ## Installation Guide
 Add this to your Gemfile
 
+    source 'https://rails-assets.org' do
+      gem 'rails-assets-tether', '>= 1.1.0'
+    end
+
     gem 'jquery-rails'
     gem 'sigbit_admin_rails'
 

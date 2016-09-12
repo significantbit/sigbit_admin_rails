@@ -38,12 +38,10 @@
   width: 32px;
   margin: 0 $spacer/10 0 $spacer*1.5;
   padding: $spacer/2 0 $spacer/2 $spacer/2;
-  text-indent: -9999px;
-  white-space: nowrap;
-  overflow: hidden;
   border: 0;
   z-index: 99;
   background: transparent;
+  @include hide-text;
 }
 .nestable-item > button:before {
   display: block;
@@ -93,9 +91,7 @@
 // Drag handle (main styling is done in sortable.scss)
 
 .nestable-item .fa.drag-handle {
-  position: absolute;
-  top: $spacer/1.3333;
-  left: $spacer/1.3333;
+  @include position(absolute, $spacer/1.3333 null null $spacer/1.3333);
 }
 
 

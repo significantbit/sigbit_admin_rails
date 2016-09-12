@@ -35,7 +35,5 @@ table .small-action-btn-group {
 }
 
 .nestable .small-action-btn-group {
-  position: absolute;
-  top: $spacer/2;
-  right: $spacer/2;
+  @include position(absolute, $spacer/2 $spacer/2 null null);
 }
