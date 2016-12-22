@@ -26,3 +26,11 @@ Create a the file `app/assets/stylesheets/variables.scss` to override variables
 
 ### Helpers
 This gem have some helpers to help you create some components easy, check the [Wiki](https://github.com/significantbit/sigbit_admin_rails/wiki) for more information
+
+### Update Version
+There is a rake task to update sass/js from latest master version of [sigbit-admin](https://github.com/significantbit/sigbit-admin).
+Run the following command to update
+
+```
+rake update
+```
