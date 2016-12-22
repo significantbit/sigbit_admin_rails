@@ -24,6 +24,13 @@ Add this to your application.js file
 ### Override variables
 Create a the file `app/assets/stylesheets/variables.scss` to override variables
 
+### Devise Views
+If you are using devise you can install sigbit-admin devise views by running the following generator
+
+```
+rails g sigbit_admin_rails:views
+```
+
 ### Helpers
 This gem have some helpers to help you create some components easy, check the [Wiki](https://github.com/significantbit/sigbit_admin_rails/wiki) for more information
 
