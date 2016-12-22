@@ -51,6 +51,7 @@ module SigbitAdminRails
     end
 
     class ViewsGenerator < Rails::Generators::Base
+      source_root File.expand_path("../../templates", __FILE__)
 
       desc "Copies Devise views to your application."
 
@@ -60,6 +61,24 @@ module SigbitAdminRails
       hook_for :form_builder, aliases: "-b",
         desc: "Form builder to be used",
         default: defined?(SimpleForm) ? "simple_form_for" : "form_for"
+
+      def copy_devise_layout
+        copy_file "layouts/devise.html.erb", "app/views/layouts/devise.html.erb"
+      end
+
+      def setup_devise_initializer
+        insert_into_file "config/initializers/devise.rb", before: 'Devise.setup do |config|' do
+          <<~BLOCK 
+            Rails.application.config.to_prepare do
+              Devise::SessionsController.layout "devise"
+              Devise::RegistrationsController.layout proc { |controller| user_signed_in? ? "application" : "devise" }
+              Devise::ConfirmationsController.layout "devise"
+              Devise::UnlocksController.layout "devise"
+              Devise::PasswordsController.layout "devise"
+            end
+          BLOCK
+        end
+      end
 
     end
   end
