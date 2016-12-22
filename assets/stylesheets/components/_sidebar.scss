@@ -125,7 +125,7 @@ body {
 
 .sidebar-brand {
   display: block;
-  width: 100%;
+  width: $sidebar-width;  
   height: $header-navbar-height;
   background: $sidebar-brand-bg url($sidebar-logotype) no-repeat $sidebar-logotype-position;
   background-size: $sidebar-logotype-size;
