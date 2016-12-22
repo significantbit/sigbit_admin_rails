@@ -1,22 +1,31 @@
+GIT
+  remote: git://github.com/rubyzip/rubyzip.git
+  revision: f34c1d972dd34ad7b71a857f52b8a911db0b13f3
+  specs:
+    rubyzip (1.2.0)
+
 PATH
   remote: .
   specs:
-    sigbit_admin_rails (0.0.5)
+    sigbit_admin_rails (0.0.6)
       bootstrap (~> 4.0.0.alpha4)
       bourbon (~> 4.2.7)
 
 GEM
   remote: https://rubygems.org/
   specs:
-    autoprefixer-rails (6.5.0.2)
+    autoprefixer-rails (6.5.4)
       execjs
-    bootstrap (4.0.0.alpha4)
+    bootstrap (4.0.0.alpha5)
       autoprefixer-rails (>= 6.0.3)
       sass (>= 3.4.19)
     bourbon (4.2.7)
       sass (~> 3.4)
       thor (~> 0.19)
     execjs (2.7.0)
+    httparty (0.14.0)
+      multi_xml (>= 0.5.2)
+    multi_xml (0.6.0)
     sass (3.4.22)
     thor (0.19.1)
 
@@ -25,7 +34,9 @@ PLATFORMS
 
 DEPENDENCIES
   bourbon (~> 4.2.7)
+  httparty (~> 0.14.0)
+  rubyzip!
   sigbit_admin_rails!
 
 BUNDLED WITH
-   1.12.5
+   1.13.6
