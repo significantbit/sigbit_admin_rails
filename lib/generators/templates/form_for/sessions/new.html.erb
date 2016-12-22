@@ -19,11 +19,11 @@
             </div>
           </div>
           <div class="col-xs-6 text-xs-right">
-            <a href="forgot">Glömt lösenord?</a>
+            <%= link_to t('devise.password.forgot'), new_user_password_path %>
           </div>
         </div>
 
-        <%= f.submit :submit, "Log in", class: 'btn btn-lg btn-primary btn-block' %>
+        <%= f.submit "Log in", class: 'btn btn-lg btn-primary btn-block' %>
       <% end %>
     </div>
   </div>

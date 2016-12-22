@@ -1,0 +1,24 @@
+<div class="col-sm-8 col-lg-6 offset-sm-2 offset-lg-3">
+  <%= link_to new_user_session_path, class: 'previous-page' do %>
+    <i class="fa fa-arrow-left" aria-hidden="true"></i><%= t('.sign_in') %>
+<% end %>
+<div class="card">
+  <div class="card-block">
+    <h2 class="card-title text-xs-center"><%= t('devise.passwords.title') %></h2>
+    <p class="card-text text-xs-center"><%= t('devise.passwords.info') %></p>
+    <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+
+
+      <%= devise_error_messages! %>
+
+      <div class="form-group">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true %>
+      </div>
+
+      <%= f.submit "Send me reset password instructions", class: 'btn btn-lg btn-primary btn-block' %>
+
+    <% end %>
+  </div>
+</div>
+<%= render "devise/shared/links" %>

@@ -15,6 +15,7 @@ module SigbitAdminRails
 
       def copy_views
         view_directory :sessions
+        view_directory :passwords
       end
 
       protected
