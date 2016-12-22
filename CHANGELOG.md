@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.1.1
+  - Fixed an issue with sass variables not overriding
+
 ## 0.1.0
   - Updated to latest sass/js to fix bugs and tweaks #13
   - `sigbit-admin.js` now automaticlly includes `bootstrap/tether/jQuery` #12
