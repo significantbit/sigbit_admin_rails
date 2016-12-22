@@ -1,4 +1,9 @@
-'use strict';
+//=require jquery.js
+//=require tether.js
+//=require bootstrap.js
+//=require libs/jquery.custom-file-input.js
+//=require libs/jquery.nestable.js
+//=require libs/jquery.sortable.min.js
 
 $(document).ready(function() {
   $('.inputfile').each(function () {

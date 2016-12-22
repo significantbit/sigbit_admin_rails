@@ -9,24 +9,27 @@
 
   // sidebar toggle
   #sidebar-toggle {
-    @include position(absolute, 0 null -1px 0);
-    padding: 0 $spacer;
-    border-radius: 0;
-    outline: 0 !important;
-    font-size: 1em;
-    color: $gray;
-    transition: opacity 200ms ease;
+    display: inline-block;
+
+    div {
+      @include position(absolute, 0 null 0 0);
+      padding: 0 $spacer;
+      font-size: 1rem;
+      color: $gray;
+      cursor: pointer;
+      line-height: $header-navbar-height;
+    }
 
     i {
       margin-right: 0.5em;
-      font-size: 1.3em;
-      vertical-align: text-bottom;
+      font-size: 1.2em;
       color: $gray-dark;
     }
 
     &:hover {
       opacity: 0.7;
     }
+
   }
 
   .navbar-brand {
@@ -51,6 +54,7 @@
     height: 100%;
     padding: 0;
     font-size: 1rem;
+    color: $gray-dark;
 
     @include media-breakpoint-down(sm) {
       padding: 0 $spacer;
@@ -65,4 +69,18 @@
 }
 
 
+}
+
+#wrapper {
+  #sidebar-toggle > div {
+    &:nth-child(1) { opacity: 1; visibility: visible; }
+    &:nth-child(2) { opacity: 0; visibility: hidden; }
+  }
+
+  &.toggled {
+    #sidebar-toggle > div {
+      &:nth-child(1) { opacity: 0; visibility: hidden; }
+      &:nth-child(2) { opacity: 1; visibility: visible; }
+    }
+  }
 }
