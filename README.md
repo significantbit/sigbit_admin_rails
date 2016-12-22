@@ -19,9 +19,6 @@ Add this to your application.scss file
 
 Add this to your application.js file
 
-    //= require jquery
-    //= require tether
-    //= require bootstrap
     //= require sigbit-admin
 
 ### Override variables
