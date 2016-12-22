@@ -684,8 +684,8 @@ $header-navbar-logotype-height:     60% !default;
 
 // Devise
 
-$devise-background-color:     $brand-primary;
-$devise-previous-link-color:  white;
+$devise-background-color:     $brand-primary !default;
+$devise-previous-link-color:  white !default;
 
 // Sidebar
 
