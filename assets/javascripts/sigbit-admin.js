@@ -32,6 +32,17 @@ $(document).ready(function() {
   });
 
 
+  var openParent = function(el) {
+    var parent = $(el).parent().parent();
+    parent.collapse('show');
+    if(parent.parent().parent().hasClass('submenu')) {
+      openParent(parent)
+    }
+  }
+  // Open active link in sidemenu
+  $.each($('.nav-link.active'), function(index, el) {
+    openParent(el)
+  });
 
   // Sidebar toggle
   $("#sidebar-toggle").click(function (e) {
