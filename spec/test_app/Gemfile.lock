@@ -1,8 +1,8 @@
 PATH
   remote: ../../
   specs:
-    sigbit_admin_rails (0.0.6)
-      bootstrap (~> 4.0.0.alpha4)
+    sigbit_admin_rails (0.1.1)
+      bootstrap (~> 4.0.0.alpha5)
       bourbon (~> 4.2.7)
 
 GEM
