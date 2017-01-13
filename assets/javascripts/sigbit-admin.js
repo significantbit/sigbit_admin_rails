@@ -63,4 +63,4 @@ var on_ready = function() {
 
 };
 
-$(document).on("turbolinks:load", on_ready)
+$(document).on("turbolinks:load", on_ready);
