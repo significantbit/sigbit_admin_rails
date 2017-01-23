@@ -40,7 +40,7 @@ $(document).ready(function() {
     }
   }
   // Open active link in sidemenu
-  $.each($('.nav-link.active'), function(index, el) {
+  $.each($('#sidebar-wrapper .nav-link.active'), function(index, el) {
     openParent(el)
   });
 

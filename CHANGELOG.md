@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.1.3
+  - Fixed bug with tabs and active state due to JS being to general
+
 ## 0.1.2
   - Added JS code from sigbit-admin to autoopen submenu in sidemenu
   - Added helpers for Page header [Docs](https://github.com/significantbit/sigbit_admin_rails/wiki/PageHeader-Helper)
