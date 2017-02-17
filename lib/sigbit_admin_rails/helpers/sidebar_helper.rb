@@ -23,7 +23,7 @@ module SigbitAdminRails
           )
           concat(
             content_tag(:ul, class: 'submenu collapse',
-                        id: url.delete('#')) do
+                                id: url.delete('#')) do
               yield
             end
           )
