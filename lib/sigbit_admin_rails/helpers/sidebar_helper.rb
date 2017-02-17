@@ -44,7 +44,8 @@ module SigbitAdminRails
     end
 
     def arrow_icon
-      tag :i, class: 'fa fa-chevron-right'
+      content_tag :i, class: 'fa fa-chevron-right' do
+      end
     end
 
     def generate_random_id
