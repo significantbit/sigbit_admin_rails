@@ -15,9 +15,7 @@ module SigbitAdminRails
 
     def sidebar_item(title, url = nil, &block)
       if block_given?
-        url = "##{(0...20).map {
-          ('a'..'z').to_a.sample
-        }.join }" unless url.present?
+        url = "##{generate_random_id}" unless url.present?
 
         content_tag :li do
           concat(link_to("#{title} #{dropdown_arrow_icon}".html_safe, url, data: { toggle: 'collapse' }))
@@ -42,6 +40,10 @@ module SigbitAdminRails
 
     def dropdown_arrow_icon
       tag :i, class: 'fa fa-chevron-right'
+    end
+
+    def generate_random_id
+      (0...20).map { ('a'..'z').to_a.sample }.join
     end
   end
 end
