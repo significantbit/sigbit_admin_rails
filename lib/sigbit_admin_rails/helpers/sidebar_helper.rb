@@ -4,11 +4,10 @@ module SigbitAdminRails
       options = args.extract_options!
       if block_given?
         content_tag :div, id: 'sidebar-wrapper' do
-          html = link_to '', options[:brand_url], class: 'sidebar-brand hidden-sm-down'
-          html << content_tag(:ul, class: 'sidebar-nav') do
+          concat(link_to '', options[:brand_url], class: 'sidebar-brand hidden-sm-down')
+          concat(content_tag(:ul, class: 'sidebar-nav') do
             yield
-          end
-          html.html_safe
+          end)
         end
       end
     end
@@ -17,16 +16,10 @@ module SigbitAdminRails
       if block_given?
         url = "##{generate_random_id}" unless url.present?
         content_tag :li do
-          concat(
-            link_to("#{ title } #{ arrow_icon }".html_safe,
-                    url, data: { toggle: 'collapse' })
-          )
-          concat(
-            content_tag(:ul, class: 'submenu collapse',
-                                id: url.delete('#')) do
-              yield
-            end
-          )
+          concat(link_to("#{ title } #{ arrow_icon }".html_safe, url, data: { toggle: 'collapse' }))
+          concat(content_tag(:ul, class: 'submenu collapse', id: url.delete('#')) do
+            yield
+          end)
         end
       else
         smart_link_to title, url, class: 'nav-link'
