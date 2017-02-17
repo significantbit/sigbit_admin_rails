@@ -17,7 +17,9 @@ module SigbitAdminRails
       if block_given?
         url = "##{generate_random_id}" unless url.present?
         content_tag :li do
-          concat(link_to("#{ title } #{ dropdown_arrow_icon }".html_safe, url, data: { toggle: 'collapse' }))
+          concat(
+              link_to("#{ title } #{ dropdown_arrow_icon }".html_safe, url, data: {toggle: 'collapse'})
+          )
           concat(content_tag(:ul, class: 'submenu collapse', id: url.delete('#')) do
             yield
           end)
