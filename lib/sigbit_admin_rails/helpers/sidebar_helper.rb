@@ -18,7 +18,7 @@ module SigbitAdminRails
         url = "##{generate_random_id}" unless url.present?
         content_tag :li do
           concat(
-            link_to("#{ title } #{ dropdown_arrow_icon }".html_safe, url, data: {toggle: 'collapse'})
+            link_to("#{ title } #{ arrow_icon }".html_safe, url, data: {toggle: 'collapse'})
           )
           concat(content_tag(:ul, class: 'submenu collapse', id: url.delete('#')) do
             yield
@@ -39,7 +39,7 @@ module SigbitAdminRails
       end
     end
 
-    def dropdown_arrow_icon
+    def arrow_icon
       tag :i, class: 'fa fa-chevron-right'
     end
 
