@@ -21,9 +21,12 @@ module SigbitAdminRails
             link_to("#{ title } #{ arrow_icon }".html_safe,
                     url, data: { toggle: 'collapse' })
           )
-          concat(content_tag(:ul, class: 'submenu collapse', id: url.delete('#')) do
-            yield
-          end)
+          concat(
+            content_tag(:ul, class: 'submenu collapse',
+                        id: url.delete('#')) do
+              yield
+            end
+          )
         end
       else
         smart_link_to title, url, class: 'nav-link'
