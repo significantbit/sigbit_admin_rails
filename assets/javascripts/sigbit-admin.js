@@ -63,7 +63,7 @@ var on_ready = function() {
 
 };
 
-if(typeof Turbolinks === 'undefined') {
+if(typeof Turbolinks !== 'undefined') {
     $(document).on("turbolinks:load", on_ready);
 } else {
     $(document).ready(on_ready);
