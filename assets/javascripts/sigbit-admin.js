@@ -5,7 +5,7 @@
 //=require libs/jquery.nestable.js
 //=require libs/jquery.sortable.min.js
 
-$(document).ready(function() {
+var on_ready = function() {
   $('.inputfile').each(function () {
     var $input = $(this),
       $label = $input.next('label'),
@@ -61,4 +61,10 @@ $(document).ready(function() {
   $('body').on('show.bs.dropdown', '.table-responsive', function () { $(this).css("overflow", "visible"); })
     .on('hide.bs.dropdown', '.table-responsive', function () { $(this).css("overflow", "auto"); });
 
-});
+};
+
+if(typeof Turbolinks !== 'undefined') {
+    $(document).on("turbolinks:load", on_ready);
+} else {
+    $(document).ready(on_ready);
+}
