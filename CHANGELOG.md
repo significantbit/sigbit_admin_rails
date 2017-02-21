@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.1.4
+  - Adding support for Turbolinks
+  
 ## 0.1.3
   - Fixed bug with tabs and active state due to JS being to general
 
@@ -15,4 +18,3 @@
   - `sigbit-admin.js` now automaticlly includes `bootstrap/tether/jQuery` #12
   - Added `rake update` command to easier update sass/js #12
   - Add generator for devise views #14
-
