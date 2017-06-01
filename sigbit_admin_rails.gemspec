@@ -14,5 +14,5 @@ Gem::Specification.new do |s|
   s.files = Dir["{app,config,assets,db,lib}/**/*"]
 
   s.add_dependency('bourbon', '~> 4.2.7')
-  s.add_dependency('bootstrap', '~> 4.0.0.alpha5')
+  s.add_dependency('bootstrap', '~> 4.0.0.alpha6')
 end

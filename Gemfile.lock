@@ -7,14 +7,14 @@ GIT
 PATH
   remote: .
   specs:
-    sigbit_admin_rails (0.1.2)
-      bootstrap (~> 4.0.0.alpha5)
+    sigbit_admin_rails (0.1.4)
+      bootstrap (~> 4.0.0.alpha6)
       bourbon (~> 4.2.7)
 
 GEM
   remote: https://rubygems.org/
   specs:
-    autoprefixer-rails (6.7.0)
+    autoprefixer-rails (6.7.2)
       execjs
     bootstrap (4.0.0.alpha6)
       autoprefixer-rails (>= 6.0.3)
@@ -39,4 +39,4 @@ DEPENDENCIES
   sigbit_admin_rails!
 
 BUNDLED WITH
-   1.13.6
+   1.13.7
