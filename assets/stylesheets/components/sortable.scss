@@ -1,7 +1,7 @@
 
 .sortable-placeholder {
-  background: $gray-lightest;
-  border: 2px dashed $gray-light;
+  background: $gray-100;
+  border: 2px dashed $gray-300;
 }
 
 [class*="sortable"] > * {
@@ -20,7 +20,7 @@ Using Font Awesome classes. The .drag-handle content is the icon fa-ellipsis-v u
   margin-left: -$spacer/1.5;
   padding: $spacer/2 $spacer/2 $spacer/2 $spacer/1.5;
   cursor: move;
-  color: rgba($gray-dark,0.5);
+  color: rgba($gray-900,0.5);
 }
 
 .fa.drag-handle:before {

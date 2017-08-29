@@ -1,4 +1,18 @@
+$gray-900:                   #040D14;
+$devise-background-color:     $gray-900;
+$sidebar-bg:                  #0b1d2a;
+
+$sidebar-logotype:        asset-path('logo.svg');
+$sidebar-logotype-size:   auto 50% !default;
+
+$sidebar-nav-link-color:            white;
+$sidebar-nav-link-color-hover:      white;
+$sidebar-nav-link-bg-hover:         theme-color("danger");
+$sidebar-nav-link-color-active:     theme-color("danger");
+$sidebar-nav-link-bg-active:        transparent !default;
+
 @import 'bourbon';
+@import "bootstrap/functions";
 @import 'variables';
 @import "bootstrap";
 
@@ -12,7 +26,6 @@
 @import 'components/btn-circle';
 @import 'components/small-action-btns';
 @import 'components/file-input';
-@import 'components/nestable';
 @import 'components/sortable';
 @import 'components/toggle-button';
 @import 'components/forms';

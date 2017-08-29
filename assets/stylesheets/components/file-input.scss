@@ -40,8 +40,8 @@
 .inputfile.big + label {
   width: 100%;
   padding: $spacer*2 $spacer;
-  color: $brand-primary;
-  background-color: $gray-lighter;
+  color: theme-color("primary");
+  background-color: $gray-200;
   text-align: center;
 
   i {
@@ -54,7 +54,7 @@
 .inputfile.big:focus + label,
 .inputfile.big.has-focus + label,
 .inputfile.big + label:hover {
-    background-color: lighten($gray-lighter, 2%);
+    background-color: lighten($gray-200, 2%);
 }
 
 
@@ -63,8 +63,8 @@
 .inputfile.medium + label {
   width: 100%;
   padding: $spacer/2;
-  color: $brand-primary;
-  background-color: $gray-lighter;
+  color: theme-color("primary");
+  background-color: $gray-200;
 }
 
 .inputfile.medium:focus + label,
@@ -81,7 +81,7 @@
     overflow: hidden;
     vertical-align: middle;
     padding: $spacer/4 0;
-    color: $gray;
+    color: $gray-400;
 }
 .inputfile.medium + label .btn {
     float: right;

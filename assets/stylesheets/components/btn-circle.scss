@@ -1,17 +1,17 @@
 .btn-circle {
     @include border-radius(50%); // Perfect circle
-    @include size($btn-padding-x*3);
+    @include size($input-btn-padding-x*3);
 
     &.btn-sm {
-      @include size($btn-padding-x*2.25);
+      @include size($input-btn-padding-x*2.25);
       font-size: $font-size-sm;
     }
     &.btn-lg {
-      @include size($btn-padding-x*5);
+      @include size($input-btn-padding-x*5);
       font-size: $font-size-lg;
     }
     &.btn-xl {
-      @include size($btn-padding-x*6.5);
+      @include size($input-btn-padding-x*6.5);
       font-size: $font-size-lg;
     }
 }

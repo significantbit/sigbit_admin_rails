@@ -15,7 +15,7 @@ $toggle-height-lg:   2.5rem;
   .toggle-slider { /* The slider */
     @include position(absolute, 0 0 0 0);
     cursor: pointer;
-    background-color: $gray-lighter;
+    background-color: $gray-200;
     @include border-radius($toggle-height);
     @include box-shadow(inset 0 1px 3px rgba(0,0,0,.12));
 
@@ -45,7 +45,7 @@ $toggle-height-lg:   2.5rem;
     }
     &.off {
       right: 11px;
-      color: $gray-light;
+      color: $gray-300;
       opacity: 1;
     }
   }
@@ -59,7 +59,7 @@ $toggle-height-lg:   2.5rem;
   }
 
   input:focus + .toggle-slider { /* Focused state */
-    box-shadow: 0 0 1px $brand-success;
+    box-shadow: 0 0 1px theme-color("success");
   }
 
 
@@ -106,17 +106,17 @@ $toggle-height-lg:   2.5rem;
 }
 
 .toggle-primary input:checked + .toggle-slider { /* Checked state */
-    background-color: $brand-primary;
+    background-color: theme-color("primary");
 }
 .toggle-success input:checked + .toggle-slider { /* Checked state */
-    background-color: $brand-success;
+    background-color: theme-color("success");
 }
 .toggle-info input:checked + .toggle-slider { /* Checked state */
-    background-color: $brand-info;
+    background-color: theme-color("info");
 }
 .toggle-warning input:checked + .toggle-slider { /* Checked state */
-    background-color: $brand-warning;
+    background-color: theme-color("warning");
 }
 .toggle-danger input:checked + .toggle-slider { /* Checked state */
-    background-color: $brand-danger;
+    background-color: theme-color("danger");
 }
