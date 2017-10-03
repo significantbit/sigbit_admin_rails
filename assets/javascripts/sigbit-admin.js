@@ -1,6 +1,6 @@
-//=require jquery.js
-//=require tether.js
-//=require bootstrap.js
+//=require jquery
+//=require popper
+//=require bootstrap
 //=require libs/jquery.custom-file-input.js
 
 var on_ready = function() {
